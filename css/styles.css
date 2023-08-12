@@ -312,6 +312,7 @@ main {
 }
 
 .modal-window-content {
+  padding: 72px 24px 24px 24px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -360,36 +361,103 @@ main {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* modal window form */
-.modal-window-form {
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
-}
+
 .modal-window-title {
   padding-top: 52px;
   color: var(--primary-second-brand-color);
   text-align: center;
   font-size: 16px;
   font-weight: 500;
-  line-height: 0.032em;
-  letter-spacing: 0.32px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
 }
-.mw-text-form {
+
+.modal-window-form {
+  width: auto;
   display: flex;
   flex-direction: column;
+  gap: 26px;
+}
 
+.mw-container {
+  margin-bottom: 8px;
+}
+
+.mw-text-form {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--primary-sub-text-color);
+  display: block;
+  margin-bottom: 4px;
   width: 100%;
   height: 100%;
 }
+
+.icon-container {
+  position: relative;
+}
+
 .mw-input-form {
   border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  padding-left: 38px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mw-text-form:focus-within {
-  border-color: blue;
+  border-color: var(--primary-first-brand-color);
   color: var(--primary-first-brand-color);
 }
+
+.modal-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-container:hover .modal-icon,
+.icon-container:focus .modal-icon {
+  fill: var(--primary-first-brand-color);
+}
+
+.comment-container {
+  margin-bottom: 16px;
+}
+
+.mw-textarea-form {
+  width: 100%;
+  height: 120px;
+  color: rgba(46, 47, 66, 0.4);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mw-textarea-form:hover,
+.mw-textarea-form:focus {
+  border-color: var(--primary-first-brand-color);
+}
+
+.chechbox-container {
+  margin-bottom: 24px;
+}
+
 .button-mw {
   display: flex;
   justify-content: center;
@@ -399,12 +467,30 @@ main {
   color: var(--primary-sub-text-color);
   font-size: 12px;
   font-weight: 400;
-  line-height: 0.03em;
-  letter-spacing: 0.48px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+
+.expert-link {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent; */
+}
+
+.consumer-agreement-link {
+  color: var(--primary-first-brand-color);
 }
 
 .modal-window-btn {
-  display: inline-flex;
+  display: block;
   justify-content: center;
   align-items: center;
   width: 169px;
@@ -412,7 +498,6 @@ main {
   padding: 16px 32px;
 
   color: var(--primary-white-color);
-  background-color: ;
   text-align: center;
   font-size: 16px;
   font-weight: 500;
@@ -420,8 +505,11 @@ main {
   letter-spacing: 0.64px;
 
   border-radius: 4px;
-  background: var(--primary-first-brand-color);
+  background-color: var(--primary-first-brand-color);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border: none;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* 2 секція */
@@ -688,32 +776,37 @@ main {
   color: var(--primary-white-color);
   font-size: 16px;
   font-weight: 500;
-  line-height: 0.032em;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
 .sub-form {
   display: flex;
   flex-direction: row;
 }
+.sub-label {
+  gap: 24px;
+}
 .sub-email {
   border-radius: 4px;
   border: 1px solid var(--primary-white-color);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  filter: drop-shadow(0px 4px 4px 0px rgba(0, 0, 0, 0.15));
   min-width: 264px;
   height: 40px;
-  margin-right: 24px;
   background-color: transparent;
+  margin-right: 24px;
   padding-left: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
+  color: var(--primary-white-color);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
 }
 
 .sub-email::placeholder {
   color: var(--primary-white-color);
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 0.06em;
-  letter-spacing: 0.48px;
 }
 
 .sub-btn {
@@ -721,7 +814,7 @@ main {
   min-width: 165px;
   border-radius: 4px;
   background: var(--primary-first-brand-color);
-
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -730,11 +823,13 @@ main {
   text-align: center;
   font-size: 16px;
   font-weight: 500;
-  line-height: 0.032em;
-  letter-spacing: 0.64px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   gap: 16px;
+  cursor: pointer;
 }
 .sub-icon {
+  margin-left: 16px;
   fill: currentColor;
 }
 
