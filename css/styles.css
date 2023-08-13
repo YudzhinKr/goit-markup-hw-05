@@ -444,6 +444,7 @@ main {
   letter-spacing: 0.04em;
   border: 1px solid rgba(46, 47, 66, 0.4);
   background-color: transparent;
+  border-radius: 4px;
   padding: 8px 16px;
   outline: transparent;
   resize: none;
@@ -465,7 +466,7 @@ main {
   width: auto;
 }
 
-.check-input:checked + .expert-link {
+.check-input:checked + .excerpt-text span {
   background-color: var(--active-link-color);
   border: none;
   fill: var(--primary-accent-color);
