@@ -469,10 +469,10 @@ main {
 .check-input:checked + .excerpt-text > .expert-link {
   background-color: var(--active-link-color);
   border: none;
+  fill: var(--primary-accent-color);
 }
 
 .check-input:checked + .excerpt-text > .expert-link .check-on {
-  fill: var(--primary-accent-color);
 }
 
 .excerpt-text {
