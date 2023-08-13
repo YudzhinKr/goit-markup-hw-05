@@ -471,7 +471,7 @@ main {
   border: none;
 }
 
-.check-input:checked + .excerpt-text > .check-on {
+.check-input:checked + .excerpt-text > .expert-link .check-on {
   fill: var(--primary-accent-color);
 }
 
